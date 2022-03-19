@@ -34,7 +34,7 @@ private String url = "jdbc:sqlite:src\\main\\database\\historico.db";
     
     private void save(Player p){
         try{ 
-            statement = connect.prepareStatement("INSERT INTO puntaje(id, nombre, puntaje) values (null, ?,?)");
+            statement = connect.prepareStatement("INSERT INTO puntajes(id, nombre, puntaje) values (null, ?,?)");
             statement.setString(1, p.getName());
             statement.setInt(2, p.getAccumulatedPrize());
             System.out.println("Se guardó el registro de " + p.getName() + ", su puntaje fue "+p.getAccumulatedPrize());
