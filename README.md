@@ -8,10 +8,7 @@ La aplicación fue desarrollada con Java 8, utilizando el IDE Apache Netbeans 12
 -Maven se encarga de instalar los plugins necesarios para la ejecución de SQLite
 
 ### Ejecución 🔧
-Existen dos formas:
-
--Clone el repositorio o descárguelo, ábralo con su IDE y ejecute la MainClass "Game" o el proyecto.  
--Clone o descargue el repositorio y ejecute el archivo QuestionsGame-1.0.0jar (Para ejecutar el jar debe tener JRE 1.8)
+-Clone el repositorio o descárguelo, ábralo con su IDE y ejecute la MainClass "Game" o el proyecto. El proyecto se ejecuta como Java with Maven.
 
 ### Notas adicionales
 La interfaz no es la más linda jajaja, pero no tenía experiencia haciendo interfaces gráficas en java.
