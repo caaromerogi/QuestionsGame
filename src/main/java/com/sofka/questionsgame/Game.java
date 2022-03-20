@@ -651,14 +651,7 @@ public class Game extends javax.swing.JFrame {
         if (jLabel8.getText().equals(randomQuestion.getRightAnswer())) {
             nextRound();
         } else {
-            //Remueve elementos gráficos para iniciar una pantalla con nueva pregunta
-            jPanel1.removeAll();
-            jPanel1.repaint();
-            //Jugador pierde premio
-            p1.losePrize();
-            con.savePlayer(p1);
-            //Se muestra la pantalla de "perdiste"
-            initComponentsLose();
+            youLose();
         }
 
     }

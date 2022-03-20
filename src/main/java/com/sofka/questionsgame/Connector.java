@@ -12,7 +12,7 @@ import javax.swing.table.DefaultTableModel;
 
 public class Connector {
 
-    private String url = "jdbc:sqlite:src\\main\\database\\historico.db";
+    private String url = "jdbc:sqlite:historico.db";
     Connection connect;
     PreparedStatement statement;
 
