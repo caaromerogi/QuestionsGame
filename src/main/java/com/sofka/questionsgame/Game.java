@@ -86,6 +86,10 @@ public class Game extends javax.swing.JFrame {
 
     public void initComponentsStart() {
         jPanel1 = new JPanel();
+        initComponentsStartAgain();
+    }
+
+    public void initComponentsStartAgain() {
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jTextField1 = new javax.swing.JTextField();
@@ -392,15 +396,240 @@ public class Game extends javax.swing.JFrame {
     }
 
     public void initComponentsWin() {
+        jLabel16 = new javax.swing.JLabel();
+        jLabel17 = new javax.swing.JLabel();
+        jButton3 = new javax.swing.JButton();
+        jLabel1 = new javax.swing.JLabel();
+        jButton4 = new javax.swing.JButton();
 
+        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+
+        jLabel16.setFont(new java.awt.Font("Microsoft Tai Le", 1, 18)); // NOI18N
+        jLabel16.setText("¡HAS GANADO EL JUEGO! :D");
+
+        jLabel17.setFont(new java.awt.Font("Microsoft Tai Le", 0, 14)); // NOI18N
+        jLabel17.setText("Has alcanzado el máximo nivel y te llevas 100.000 puntos");
+
+        jButton3.setText("Jugar de nuevo");
+        jButton3.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButton3MouseClicked(evt);
+            }
+        });
+
+        jLabel1.setText("Pudo ser suerte de principiante ¡Te reto a intentarlo otra vez!");
+
+        jButton4.setText("Histórico");
+        jButton4.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButton4MouseClicked(evt);
+            }
+        });;
+
+        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+        jPanel1.setLayout(jPanel1Layout);
+        jPanel1Layout.setHorizontalGroup(
+                jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                                .addContainerGap(106, Short.MAX_VALUE)
+                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                                                .addComponent(jLabel16)
+                                                .addGap(144, 144, 144))
+                                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                                                .addComponent(jLabel17)
+                                                .addGap(86, 86, 86))
+                                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                                        .addGroup(jPanel1Layout.createSequentialGroup()
+                                                                .addGap(38, 38, 38)
+                                                                .addComponent(jButton3)
+                                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                                                .addComponent(jButton4))
+                                                        .addComponent(jLabel1))
+                                                .addGap(119, 119, 119))))
+        );
+        jPanel1Layout.setVerticalGroup(
+                jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addGap(47, 47, 47)
+                                .addComponent(jLabel16)
+                                .addGap(58, 58, 58)
+                                .addComponent(jLabel17)
+                                .addGap(52, 52, 52)
+                                .addComponent(jLabel1)
+                                .addGap(66, 66, 66)
+                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                        .addComponent(jButton3)
+                                        .addComponent(jButton4))
+                                .addContainerGap(151, Short.MAX_VALUE))
+        );
+
+        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
+        getContentPane().setLayout(layout);
+        layout.setHorizontalGroup(
+                layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        );
+        layout.setVerticalGroup(
+                layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        );
+
+        pack();
     }
 
     public void initComponentsSurrender() {
+        jLabel18 = new javax.swing.JLabel();
+        jLabel19 = new javax.swing.JLabel();
+        jButton4 = new javax.swing.JButton();
+        jLabel20 = new javax.swing.JLabel();
+        jButton3 = new javax.swing.JButton();
 
+        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+
+        jLabel18.setFont(new java.awt.Font("Microsoft Tai Le", 0, 18)); // NOI18N
+        jLabel18.setText("TE HAS RETIRADO DEL JUEGO");
+
+        jLabel19.setFont(new java.awt.Font("Microsoft Tai Le", 0, 14)); // NOI18N
+        jLabel19.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel19.setText("Tu premio fue de " + p1.getAccumulatedPrize() + " puntos");
+
+        jButton4.setText("Historico");
+        jButton4.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButton4MouseClicked(evt);
+            }
+        });;
+
+        jLabel20.setText("¡Te reto a intentarlo de nuevo!");
+
+        jButton3.setText("Jugar de nuevo");
+        jButton3.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButton3MouseClicked(evt);
+            }
+        });
+
+        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+        jPanel1.setLayout(jPanel1Layout);
+        jPanel1Layout.setHorizontalGroup(
+                jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addGroup(jPanel1Layout.createSequentialGroup()
+                                                .addGap(148, 148, 148)
+                                                .addComponent(jLabel18))
+                                        .addGroup(jPanel1Layout.createSequentialGroup()
+                                                .addGap(133, 133, 133)
+                                                .addComponent(jButton3)
+                                                .addGap(129, 129, 129)
+                                                .addComponent(jButton4))
+                                        .addGroup(jPanel1Layout.createSequentialGroup()
+                                                .addGap(178, 178, 178)
+                                                .addComponent(jLabel19))
+                                        .addGroup(jPanel1Layout.createSequentialGroup()
+                                                .addGap(193, 193, 193)
+                                                .addComponent(jLabel20)))
+                                .addContainerGap(101, Short.MAX_VALUE))
+        );
+        jPanel1Layout.setVerticalGroup(
+                jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addGap(52, 52, 52)
+                                .addComponent(jLabel18)
+                                .addGap(77, 77, 77)
+                                .addComponent(jLabel19)
+                                .addGap(55, 55, 55)
+                                .addComponent(jLabel20)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 102, Short.MAX_VALUE)
+                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                        .addComponent(jButton4)
+                                        .addComponent(jButton3))
+                                .addGap(135, 135, 135))
+        );
+
+        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
+        getContentPane().setLayout(layout);
+        layout.setHorizontalGroup(
+                layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        );
+        layout.setVerticalGroup(
+                layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        );
+
+        pack();
     }
 
-    public void initComponetsScore() {
+    public void initComponentsScore() {
+        jButton3 = new javax.swing.JButton();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        jTable1 = new javax.swing.JTable();
+        jLabel15 = new javax.swing.JLabel();
 
+        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+
+        jButton3.setText("Jugar de nuevo");
+        jButton3.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButton3MouseClicked(evt);
+            }
+        });
+
+        jTable1.setModel(new javax.swing.table.DefaultTableModel(
+                new Object[][]{},
+                new String[]{
+                    "Id", "Nombre", "Puntaje"
+                }
+        ));
+        jScrollPane1.setViewportView(jTable1);
+
+        jLabel15.setText("HISTÓRICO");
+
+        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+        jPanel1.setLayout(jPanel1Layout);
+        jPanel1Layout.setHorizontalGroup(
+                jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addGap(230, 230, 230)
+                                .addComponent(jButton3)
+                                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                                .addContainerGap(69, Short.MAX_VALUE)
+                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                                                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 417, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                .addGap(57, 57, 57))
+                                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                                                .addComponent(jLabel15)
+                                                .addGap(242, 242, 242))))
+        );
+        jPanel1Layout.setVerticalGroup(
+                jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                                .addContainerGap(15, Short.MAX_VALUE)
+                                .addComponent(jLabel15)
+                                .addGap(18, 18, 18)
+                                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 388, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(29, 29, 29)
+                                .addComponent(jButton3)
+                                .addContainerGap())
+        );
+
+        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
+        getContentPane().setLayout(layout);
+        layout.setHorizontalGroup(
+                layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        );
+        layout.setVerticalGroup(
+                layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        );
+
+        pack();
     }
 
 //Eventos de clickeo
@@ -473,14 +702,16 @@ public class Game extends javax.swing.JFrame {
     //verificar si el jugador superó el max nivel de dificultad
     public void verifyWin() {
         if (ronda.currentLevel() == 6) {
-            //agregar pantalla de victoria;
+            con.savePlayer(p1);
+            initComponentsWin();
         } else {
             initComponentsInGame();
         }
 
     }
 
-    public void nextRound() {
+    //El jugador obtiene premio, pasa de ronda y se inicia la nueva pregunta
+    private void nextRound() {
         //Otorga premio al jugador
         p1.increaseAccumulated(ronda.getPrize());
         //Sube de nivel
@@ -493,6 +724,7 @@ public class Game extends javax.swing.JFrame {
         verifyWin();
     }
 
+    //El jugador pierde el premio, se muestra la pantalla de perder y se guardan los datos
     public void youLose() {
         //Remueve elementos gráficos para iniciar una pantalla con nueva pregunta
         jPanel1.removeAll();
@@ -506,21 +738,30 @@ public class Game extends javax.swing.JFrame {
 
     //Retirarse
     private void jButton2MouseClicked(java.awt.event.MouseEvent evt) {
+        con.savePlayer(p1);
+        jPanel1.removeAll();
+        jPanel1.repaint();
+        initComponentsSurrender();
 
     }
 
 //CLickear botón "Jugar de nuevo"
     private void jButton3MouseClicked(java.awt.event.MouseEvent evt) {
-        Boolean newGame = true;
+
         jPanel1.removeAll();
         jPanel1.repaint();
         //sobrecargar el método para escribir sobre el JPanel1 otra vez
-        initComponentsStart();
+        initComponentsStartAgain();
 
     }
 
 //Clickear botón "Histórico"
     private void jButton4MouseClicked(java.awt.event.MouseEvent evt) {
+        jPanel1.removeAll();
+        jPanel1.repaint();
+        initComponentsScore();
+        //Llena la tabla con los datos de la db
+        con.showDataBase(jTable1);
 
     }
 
@@ -542,8 +783,16 @@ public class Game extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel13;
     private javax.swing.JLabel jLabel14;
+    private javax.swing.JLabel jLabel15;
+    private javax.swing.JLabel jLabel16;
+    private javax.swing.JLabel jLabel17;
+    private javax.swing.JLabel jLabel18;
+    private javax.swing.JLabel jLabel19;
+    private javax.swing.JLabel jLabel20;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JTable jTable1;
 
 }
